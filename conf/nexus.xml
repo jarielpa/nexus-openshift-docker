@@ -310,8 +310,7 @@
      <repository>
       <id>maven.itella.com</id>
       <name>maven.itella.com</name>
-      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole
->
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
       <providerHint>maven2</providerHint>
       <localStatus>IN_SERVICE</localStatus>
       <notFoundCacheActive>true</notFoundCacheActive>
