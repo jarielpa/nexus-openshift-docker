@@ -7,6 +7,15 @@
     <retrievalRetryCount>3</retrievalRetryCount>
     <queryString></queryString>
   </globalConnectionSettings>
+   <remoteProxySettings>
+    <httpProxySettings>
+      <proxyHostname>proxy.posti.fi</proxyHostname>
+      <proxyPort>8086</proxyPort>
+    </httpProxySettings>
+     <nonProxyHosts>
+      <nonProxyHost>maven.itella.com</nonProxyHost>
+    </nonProxyHosts>
+  </remoteProxySettings>
   <restApi>
     <uiTimeout>60000</uiTimeout>
   </restApi>
@@ -200,6 +209,8 @@
           <memberRepository>central</memberRepository>
           <memberRepository>redhat-ga</memberRepository>
           <memberRepository>fuse-releases</memberRepository>
+          <memberRepository>fusesource.ea</memberRepository>
+          <memberRepository>maven.itella.com</memberRepository>
         </memberRepositories>
       </externalConfiguration>
     </repository>
@@ -253,6 +264,69 @@
       </localStorage>
       <remoteStorage>
         <url>http://repo.fusesource.com/nexus/content/repositories/releases/</url>
+      </remoteStorage>
+      <externalConfiguration>
+        <repositoryPolicy>RELEASE</repositoryPolicy>
+        <checksumPolicy>WARN</checksumPolicy>
+        <fileTypeValidation>true</fileTypeValidation>
+        <downloadRemoteIndex>true</downloadRemoteIndex>
+        <artifactMaxAge>-1</artifactMaxAge>
+        <metadataMaxAge>1440</metadataMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <autoBlockActive>true</autoBlockActive>
+      </externalConfiguration>
+    </repository>
+        <repository>
+      <id>fusesource.ea</id>
+      <name>FuseSource Community Early Access Release Repository</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheActive>true</notFoundCacheActive>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <remoteStorage>
+        <url>https://repo.fusesource.com/nexus/content/groups/ea/</url>
+      </remoteStorage>
+      <externalConfiguration>
+        <repositoryPolicy>RELEASE</repositoryPolicy>
+        <checksumPolicy>WARN</checksumPolicy>
+        <fileTypeValidation>true</fileTypeValidation>
+        <downloadRemoteIndex>true</downloadRemoteIndex>
+        <artifactMaxAge>-1</artifactMaxAge>
+        <metadataMaxAge>1440</metadataMaxAge>
+        <itemMaxAge>1440</itemMaxAge>
+        <autoBlockActive>true</autoBlockActive>
+      </externalConfiguration>
+    </repository>
+     <repository>
+      <id>maven.itella.com</id>
+      <name>maven.itella.com</name>
+      <providerRole>org.sonatype.nexus.proxy.repository.Repository</providerRole
+>
+      <providerHint>maven2</providerHint>
+      <localStatus>IN_SERVICE</localStatus>
+      <notFoundCacheActive>true</notFoundCacheActive>
+      <notFoundCacheTTL>1440</notFoundCacheTTL>
+      <userManaged>true</userManaged>
+      <exposed>true</exposed>
+      <browseable>true</browseable>
+      <writePolicy>READ_ONLY</writePolicy>
+      <indexable>true</indexable>
+      <searchable>true</searchable>
+      <localStorage>
+        <provider>file</provider>
+      </localStorage>
+      <remoteStorage>
+        <url>http://maven.itella.com/repository/central-maven-repo/</url>
       </remoteStorage>
       <externalConfiguration>
         <repositoryPolicy>RELEASE</repositoryPolicy>
