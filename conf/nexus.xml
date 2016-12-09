@@ -448,5 +448,5 @@
     <password>{d1UpjUCfiF4HvdK1XgEf7eueKgJnHVcwOGrkG4owb9A=}</password>
     <systemEmailAddress>system@nexus.org</systemEmailAddress>
   </smtpConfiguration>
-  <notification />
+  <notification /> 
 </nexusConfiguration>
